@@ -1,0 +1,22 @@
+<div class="col-sm-8">
+    <ul class="list-group">
+        <li ng-repeat="student in students | orderBy: 'last_name':reverse" class="list-group-item">
+            {{student.id}}: {{student.last_name}}, {{student.first_name}}
+            <a ng-click="confirmDelete(student)">
+                <span class="pull-right"><span class="glyphicon glyphicon-remove"></span></span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="col-sm-4">
+    <div class="form-group">
+        <label for="text-fname">First Name: </label>
+        <input type="text" id="text-fname" class="form-control" ng-model="newStudent.first_name">
+        <label for="text-lname">Last Name: </label>
+        <input type="text" id="text-lname" class="form-control" ng-model="newStudent.last_name">
+        <button class="btn btn-default" ng-click="addStudent()">Submit</button>
+    </div>
+</div>
+
+
+
