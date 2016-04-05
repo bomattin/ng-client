@@ -1,0 +1,20 @@
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-label="Close" ng-click="$hide()"><span aria-hidden="true">&times;</span></button>
+                <h3>Update Student</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="text-fname">First Name: </label>
+                    <input type="text" id="text-fname" class="form-control" ng-model="student.first_name">
+                    <label for="text-lname">Last Name: </label>
+                    <input type="text" id="text-lname" class="form-control" ng-model="student.last_name">
+                    <button class="btn btn-default" ng-click="updateStudent(student.id)">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
